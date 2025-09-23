@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>玉香津包子愛饅頭專賣店 - 鹿港肉包・純手工傳統美食</title>
+    <meta name="description" content="創立於1948年的玉香津包子，傳承手工製作，主打鮮肉包、素菜包、饅頭、鹹蛋糕。百年傳承，在地好味道！">
+  <meta name="keywords" content="鹿港肉包,玉香津肉包,鹿港小吃,包子,饅頭,鹹蛋糕,鹿港美食">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.example.com/">
+
+  <!-- Open Graph (FB / LINE 分享) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="玉香津包子饅頭專賣店 - 鹿港肉包・純手工傳統美食">
+  <meta property="og:description" content="玉香津包子傳承自1948年，堅持純手工現做，鹿港老字號的好味道。鮮肉包、蓮子素包、芋頭饅頭，香氣撲鼻、排隊必買！">
+  <meta property="og:url" content="https://www.example.com/">
+  <meta property="og:image" content="https://www.example.com/images/share.jpg">
+  <meta property="og:locale" content="zh_TW">
+  
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft JhengHei', 'Noto Sans TC', sans-serif;
+            background-color: #fff5e6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header 設計 */
+        .header {
+            background: linear-gradient(135deg, #fff3e0 0%, #c9fbf8 100%);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 25px 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction:row;      /* 上下堆疊 */
+    align-items: center;         /* 水平置中 */
+    gap: 10px;                   /* Logo 和 Menu 之間留距離 */
+    padding: 15px;
+  }
+
+  .logo-section {
+    flex-direction: row;      /* Logo 與文字直排 */
+    align-items: center;
+    text-align: center;
+  }
+
+  .brand-name {
+    font-size: 1.4rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.9rem;
+    margin-top: 2px;
+  }
+
+  .nav-menu {
+    flex-direction:row      /* Menu 水平排列 */
+    align-items: center;         /* Menu 置中 */
+    gap: 12px;
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+}
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            filter: drop-shadow(2px 2px 4px rgba(210, 105, 30, 0.3));
+        }
+
+        .brand-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #d2691e;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .brand-subtitle {
+            font-size: 0.9rem;
+            color: #000000;
+            margin-top: -5px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-link:hover {
+            color: #ff0000;
+            transform: translateY(-2px);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #a4c88c, #a3f3ab);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .nav-link:hover::after {
+            width: 80%;
+        }
+
+.banner {
+  width: 100%;
+  margin: 0 auto 20px auto;   /* 跟下面內容保留間距 */
+  text-align: center;
+}
+
+.banner-img {
+  width: 100%;         /* 滿版寬度 */
+  height: auto;        /* 高度自動維持比例 */
+  border-radius: 8px;
+  display: block;      /* 移除底下可能的空隙 */
+}
+
+
+        /* 主要內容區域 */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Hero Banner */
+        .hero-section {
+            background: linear-gradient(135deg,hsl(41, 100%, 81%) ,
+                hsl(185, 100%, 88%) );
+            border-radius: 20px;
+            padding: 60px 40px;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-title::before {
+    content: '🌾';
+    margin-right: 12px;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* 在標題後加 🌾 */
+.hero-title::after {
+    content: '🌾';
+    margin-left: 12px;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            color: #d2691e;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+.discount-info {
+  background: linear-gradient(135deg, #f9d976, #a1c4fd);
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.discount-info .title {
+  color: #e74c3c;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.discount-info .subtitle {
+  font-size: 1em;
+  margin-bottom: 25px;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* 手機版自動上下堆疊 */
+}
+
+.info-box {
+  flex: 1;
+  background: #F4FAFB;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    
+}
+
+.info-box h3 {
+  margin-bottom: 15px;
+  color: #e622df
+}
+
+.info-box p {
+  margin: 8px 0;
+  font-size: 1.05em;
+  line-height: 1.6;
+  color: #2c3e50;
+}
+
+.info-box .range {
+  color: #27ae60;           /* 綠色 */
+  font-weight: 600;
+}
+
+/* 金額 */
+.info-box .price {
+  color: #e74c3c;           /* 紅色 */
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+/* 代收費 highlight */
+.info-box .highlight {
+  color: #d35400;           /* 橘紅 */
+  font-weight: 700;
+}
+
+/* 附註文字 */
+.info-box small {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+        /* 公司簡介  */
+.content-section1  {
+            background: linear-gradient(135deg,hsl(41, 89%, 75%) ,
+                hsl(185, 63%, 65%) );
+            border-radius: 20px;
+            padding: 60px 40px;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+.company-intro1 {
+   position: relative;
+  border-radius: 12px;
+  padding: 20px 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  /* 背景圖在下，白色遮罩在上，確保文字清楚 */
+  background:
+    linear-gradient(rgba(255,255,255,.86), rgba(255,255,255,.86)),
+    url("imags/logo22") center/cover no-repeat;
+}
+.section-title1 {
+            font-size: 2.5rem;
+            color: #d2691e;
+            margin-bottom: 20px;
+            margin-left: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+/* 公司簡介文字 */
+.intro-text1 {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #000000;
+    text-align: justify;
+    margin-bottom: 15px;
+    
+    
+}
+
+/* 內文中需要突出的文字 */
+.highlight-text1 {
+    color: #d2691e;                          /* 品牌橘棕 */
+    font-weight: bold;
+}
+
+/* 簡單淡入動畫 */
+.section-title1::before {
+    content: ' 📜 ';
+    margin-right: 12px;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+.section-title1::after {
+    content: ' 📜 ';
+    margin-right: 12px;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+
+.intro-image-wrapper {
+  flex: 1;
+  order: 1;   /* 圖片放左邊 */
+   
+}
+
+.intro-text-wrapper {
+  flex: 2;
+  order: 2;   /* 文字放右邊 */
+}
+
+.company-intro1 {
+  display: flex;
+  flex-direction: row-reverse; /* 反轉排列，圖片在右邊 */
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+
+.intro-picture {
+    margin-top: 70px;
+  width: 100%;                /* 圖片自適應區塊寬度 */ 
+  max-width: 600px;           /* 最大寬度限制 */
+  border-radius: 12px;        /* 加點圓角 */
+  box-shadow: 0 4px 12px rgba(0,0,0,.08); /* 陰影 */
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .company-intro1 {
+    flex-direction: column;   /* 變上下排列 */
+    align-items: center;      /* 水平置中 */
+  }
+
+  .intro-text-wrapper {
+    order: 1;                 /* 文字在上 */
+    flex: none;               /* 不限制比例 */
+    width: 100%;              /* 佔滿寬度 */
+  }
+
+  .intro-image-wrapper {
+    order: 2;                 /* 圖片在下 */
+    flex: none;
+    width: 100%;              /* 佔滿寬度 */
+    display: flex;
+    justify-content: center;
+  }
+
+  .intro-picture {
+    margin-top: 20px;         /* 手機版只保留少量間距 */
+    max-width: 90%;           /* 避免太寬 */
+  }
+}
+
+
+/* 商品圖片本身 */
+.product-card1 img {
+  width: 100%;                        /* 填滿容器寬度 */
+  height: 100%;                       /* 填滿容器高度 */
+  object-fit: cover;                   /* 保持比例，裁掉多餘的部分 */
+  display: block;                     /* 移除多餘空隙 */
+}
+
+        /* 內容卡片 */
+        .content-section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #d2691e;
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #a4c88c, #d2691e);
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .content-card {
+            background: rgb(255, 255, 255);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(14, 11, 11, 0.807);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #ffa8f6, #47f5f8);
+        }
+
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            color: #ca1fc7;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .card-content {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* 公司簡介特殊樣式 */
+        .company-intro {
+            background: linear-gradient(135deg, #fdf8f2 0%, rgba(164, 200, 140, 0.05) 100%);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            position: relative;
+        }
+
+       
+        .intro-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+        }
+
+        .highlight-text {
+            color: #d2691e;
+            font-weight: bold;
+            background: linear-gradient(135deg, rgba(210, 105, 30, 0.1), rgba(164, 200, 140, 0.1));
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* 產品展示 */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .product-image {
+            height: 180px;
+            background: linear-gradient(45deg, #a4c88c, #d2691e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #d2691e;
+            margin-bottom: 8px;
+        }
+
+        .product-price {
+            font-size: 1.1rem;
+            color: #a4c88c;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .product-desc {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* 聯絡資訊 */
+        .contact-info {
+            background: linear-gradient(135deg, rgba(164, 200, 140, 0.1), rgba(210, 105, 30, 0.1));
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+        }
+
+        .contact-text {
+            flex: 1;
+        }
+
+        .contact-label {
+            font-weight: bold;
+            color: #d2691e;
+            margin-bottom: 5px;
+        }
+
+        .contact-value {
+            color: #666;
+        }
+
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-section {
+                padding: 40px 20px;
+            }
+
+            .main-content {
+                padding: 20px 15px;
+            }
+
+            .company-intro {
+                padding: 25px;
+            }
+        }
+
+        /* 動畫效果 */
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 今日熱銷標記 */
+        .hot-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo-section">
+                 <img src="imags/logo1.png" alt=" Logo" class="logo" />
+                <div>
+                    <div class="brand-name">玉香津包子饅頭專賣店</div>
+                    <div class="brand-subtitle">鹿港肉包・純手工傳統美食</div>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#company" class="nav-link">公司簡介</a></li>
+                <li class="nav-item"><a href="#products" class="nav-link">產品介紹</a></li>
+                <li class="nav-item"><a href="#news" class="nav-link">最新消息</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">聯絡我們</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <section class="banner">
+  <img src="imags/logo2.jfif" alt="橫幅圖" class="banner-img">
+</section>
+<!-- Main Content -->
+    <main class="main-content">
+        <!-- 公司簡介 -->
+<section id="company" class="content-section1">
+  <h2 class="section-title1">公司簡介</h2>
+
+  <!-- 這裡是 flex 容器 -->
+  <div class="company-intro1">
+
+    <!-- 左邊文字 -->
+    <div class="intro-text-wrapper">
+      <p class="intro-text1">
+        深獲地方口碑。創立人李大津先生於
+        <span class="highlight-text1">1948年成立壹玉津包子店</span>，第二代女兒、女婿，傳承從父親身上學到的製作
+        [包子、肉包、素菜包、饅頭]技術，於2012年將原有壹玉律包子店
+        <span class="highlight-text1">更名玉香津包子饅頭專賣店</span>。
+      </p>
+      <br>
+      <p class="intro-text1">
+        玉香津包子一直秉持著用心、用感情的態度做肉包，不但肉包好吃，蓮子素包、鹹蛋糕和芋頭饅頭也很受歡迎。純手工現做，
+        <span class="highlight-text1">玉香津肉包</span>是在地人的最愛，採用精選的新鮮大腿肉、台灣香菇…及傳承配方研製而成。
+        完全採用純手工製作，而且是現場製作，鮮奶饅頭即新鮮又好吃。採用柴油蒸氣鍋，每到包子出籠的那一刻，
+        香噴噴的味道總是吸引著在地老饕上門排隊搶購。
+      </p>
+      <p class="intro-text1">
+        <span class="highlight-text1">
+          手工製作：蛋黃香菇肉包、鮮肉包、蓮子素包、鹿港鹹蛋糕、芋仔饅頭、桂圓饅頭、起士饅頭、牛奶饅頭、牛舌餅、岩燒薄片。
+        </span>
+      </p>
+    </div>
+
+    <!-- 右邊圖片 -->
+    <div class="intro-image-wrapper">
+      <img src="imags/logo3.jpg" alt="玉香津公司圖" class="intro-picture">
+    </div>
+
+  </div>
+</section>
+
+        <!-- 產品介紹 -->
+        <section id="products" class="content-section">
+            <h2 class="section-title"> 🍴精選產品🍴</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="hot-badge">今日熱銷 #1</div>
+                    <img src="imags/logo15.jpg" alt="經典鮮肉包(台灣豬)" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-name">經典鮮肉包</h3>
+                        <div class="product-price">NT$ 25</div>
+                        <p class="product-desc">選用台灣溫體豬肉，搭配獨家調味，皮薄餡多，一口咬下滿滿肉汁香</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="hot-badge">今日熱銷 #2</div>
+                    <img src="imags/ligo15.jpg" alt="蛋黃香菇肉包" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-name">蛋黃香菇肉包</h3>
+                        <div class="product-price">NT$ 35</div>
+                        <p class="product-desc">新鮮香菇配鹹蛋黃，層次豐富的口感讓人回味無窮</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="hot-badge">今日熱銷 #3</div>
+                    <img src="imags/logo20.jpg" alt="牛奶饅頭" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-name">牛奶饅頭</h3>
+                        <div class="product-price">NT$ 18</div>
+                        <p class="product-desc">使用純鮮奶製作，口感柔軟香甜，孩子們的最愛</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="imags/logo14.jpg" alt="蓮子素包" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-name">特製蓮子素包</h3>
+                        <div class="product-price">NT$ 30</div>
+                        <p class="product-desc">精選蓮子搭配時令蔬菜，清爽健康不油膩</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="imags/logo16.jpg" alt="芋頭饅頭" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-name">芋頭饅頭</h3>
+                        <div class="product-price">NT$ 20</div>
+                        <p class="product-desc">大甲芋頭製作，香甜綿密，是下午茶的最佳選擇</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="imags/logo17.jpg" alt="桂圓饅頭" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-name">黑糖桂圓饅頭</h3>
+                        <div class="product-price">NT$ 22</div>
+                        <p class="product-desc">精選桂圓乾，溫補養生，是長輩們喜愛的傳統味道</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="imags/logo18.jpg" alt="起司饅頭" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-name">起司饅頭</h3>
+                        <div class="product-price">NT$ 22</div>
+                        <p class="product-desc">香濃起司融入綿密麵香，一口滿足濃郁與柔軟的雙重享受</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="imags/logo19.jpg" alt="綠豆饅頭" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-name">綠豆饅頭</h3>
+                        <div class="product-price">NT$ 22</div>
+                        <p class="product-desc">清甜綠豆細緻綿密，搭配鬆軟外皮，清爽不膩</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="imags/logo21.jpg" alt="古早味鹹蛋糕" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-name">古早味鹹蛋糕</h3>
+                        <div class="product-price">NT$ 22</div>
+                        <p class="product-desc">綿密蛋糕層疊鹹香肉鬆，重現懷舊古早味</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hero Section -->
+        <section class="hero-section fade-in">
+            <h1 class="hero-title">-優惠資訊-</h1>
+            <p class="subtitle">轉帳 <strong>免手續費</strong> / 貨到付款需加收代收費</p>
+
+  <div class="info-container">
+    <!-- 左邊：運費 -->
+    <div class="info-box">
+      <h3 class="title-orange">🚚 貨到付款運費</h3>
+        <p><span class="range">1–2 盒</span> ： <span class="price">$190</span></p>
+        <p><span class="range">3–6 盒</span> ： <span class="price">$255</span></p>
+        <p><span class="range">7–16 盒</span> ： <span class="price">$320</span></p>
+        <small class="note">※ 一件最多可裝 16 盒（160 顆）</small>
+      </div>
+
+      <!-- 右邊：代收費 -->
+      <div class="info-box">
+        <h3 class="title-blue">💰 代收費</h3>
+        <p>滿 <span class="price">2000</span> 元 → 加收 <span class="highlight">60</span> 元</p>
+        <p>滿 <span class="price">3000</span> 元 → 加收 <span class="highlight">90</span> 元</p>
+        <p>滿 <span class="price">4000</span> 元 → 加收 <span class="highlight">120</span> 元</p>
+    </div>
+  </div>
+        </section>
+        <!-- 最新消息 -->
+        <section id="news" class="content-section">
+            <h2 class="section-title">📢 最新消息</h2>
+            <div class="content-grid">
+                <div class="content-card">
+                    <span class="card-icon">🎉</span>
+                    <h3 class="card-title">中秋節營業時間調整</h3>
+                    <div class="card-content">
+                        <p><strong>2024/09/15 - 09/18</strong></p>
+                        <p>中秋連假期間正常營業，歡迎提前預訂包子。特製蛋黃肉包供應中！</p>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <span class="card-icon">🆕</span>
+                    <h3 class="card-title">秋季限定新品上市</h3>
+                    <div class="card-content">
+                        <p><strong>即日起 - 11/30</strong></p>
+                        <p>肉包、紅豆饅頭秋季限定登場！使用當季新鮮栗子，數量有限售完為止。</p>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <span class="card-icon">📦</span>
+                    <h3 class="card-title">宅配服務優惠</h3>
+                    <div class="card-content">
+                        <p><strong>滿額免運中</strong></p>
+                        <p>購滿500元即享免運服務，新增冷凍宅配選項，讓您在家也能品嚐到新鮮美味！</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 聯絡我們 -->
+        <section id="contact" class="content-section">
+            <h2 class="section-title">📞 聯絡我們</h2>
+            <div class="contact-info">
+                <div class="contact-grid">
+                   
+                    <div class="contact-item">
+                        <span class="contact-icon">⏰</span>
+                        <div class="contact-text">
+                            <div class="contact-label">營業時間</div>
+                            <div class="contact-value">週一至週日 08:00-19:30</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div class="contact-text">
+                            <div class="contact-label">聯絡電話</div>
+                            <div class="contact-value">04-7789514</div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div class="contact-text">
+                            <div class="contact-label">門市地址</div>
+                            <div class="contact-value">彰化縣鹿港鎮中山路109號</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🚚</span>
+                        <div class="contact-text">
+                            <div class="contact-label">配送服務</div>
+                            <div class="contact-value">滿500元免運 / 貨到付款</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 25px; padding: 20px; background: rgba(255,255,255,0.8); border-radius: 10px;">
+                    <p style="color: #d2691e; font-weight: bold; margin-bottom: 10px;">🗺️ 交通便利，歡迎蒞臨品嚐</p>
+                    <p style="color: #666; font-size: 0.95rem;">位於鹿港老街核心區域，鄰近龍山寺、天后宮等知名景點</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // 平滑滾動效果
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // 滾動動畫效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 為所有卡片添加動畫
+        document.querySelectorAll('.content-card, .product-card').forEach((card) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
