@@ -503,15 +503,12 @@
         }
 
         .product-image {
-            height: 180px;
-            background: linear-gradient(45deg, #a4c88c, #d2691e);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;   /* 保留背景或拿掉都行 */
+    padding: 10px;      /* 讓圖片不要緊貼邊框 */
+}
 
         .product-info {
             padding: 20px;
@@ -536,6 +533,13 @@
             font-size: 0.95rem;
             line-height: 1.5;
         }
+        .product-card img {
+    width: 100%;        /* 讓圖片自適應容器寬度 */
+    height: auto;       /* 等比例縮放 */
+    object-fit: cover;  /* 保持比例，超出會裁切 */
+    display: block;     /* 去掉底下多餘空白 */
+    border-radius: 10px; /* 可選：圖片圓角 */
+}
 
         /* 聯絡資訊 */
         .contact-info {
@@ -579,6 +583,38 @@
             color: #666;
         }
 
+     
+/* 新增：QR 圖檔大小控制 */
+.contact-qr {
+  width: 120px;        /* 調整寬度即可控制大小 */
+  height: auto;        /* 等比例縮放 */
+  max-width: 100%;     /* 手機小螢幕不會爆版 */
+  object-fit: contain; /* 保持完整顯示 */
+  border-radius: 8px;  /* 可選：圓角 */
+}
+.map-container {
+    width: 100%;          /* 占滿橫列 */
+    margin-top: 25px;
+    text-align: center;
+}
+
+.map-text {
+    padding: 20px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.map-text p:first-child {
+    color: #d2691e;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.map-text p:last-child {
+    color: #666;
+    font-size: 0.95rem;
+}
         /* 響應式設計 */
         @media (max-width: 768px) {
             .nav-container {
@@ -729,6 +765,36 @@
   /* 共同小元件微調 */
   .logo-section { gap: 10px; }
   .info-box small { font-size: .85em; }
+  .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 兩列並排 */
+        gap: 15px;  /* 手機上間距縮小一點會更好看 */
+    }
+
+    .product-card {
+        font-size: 0.1rem; /* 卡片內容稍微縮小，避免擠太滿 */
+    }
+
+    .product-image {
+         width: 90%;   /* 手機再縮小一點 */
+    }
+    .product-name {
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #d2691e;
+            margin-bottom: 8px;
+        }
+
+        .product-price {
+            font-size: 0.8rem;
+            color: #a4c88c;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+.product-desc {
+            color: #666;
+            font-size: 0.7rem;
+            line-height: 1.5;
+        }
 }
     </style>
 </head>
@@ -962,18 +1028,33 @@
                         </div>
                     </div>
                     <div class="contact-item">
-                        <span class="contact-icon">🚚</span>
                         <div class="contact-text">
-                            <div class="contact-label">配送服務</div>
-                            <div class="contact-value">滿500元免運 / 貨到付款</div>
+                            <div class="contact-label">📱官方line</div>
+                            <div class="contact-value">玉香津包子饅頭專賣店</div>
                         </div>
+                        <img class="contact-qr" src="imags/logo23.png"
+    alt="玉香津包子饅頭專賣店 官方 LINE QR Code" loading="lazy"/>
                     </div>
                 </div>
-                <div style="text-align: center; margin-top: 25px; padding: 20px; background: rgba(255,255,255,0.8); border-radius: 10px;">
-                    <p style="color: #d2691e; font-weight: bold; margin-bottom: 10px;">🗺️ 交通便利，歡迎蒞臨品嚐</p>
-                    <p style="color: #666; font-size: 0.95rem;">位於鹿港老街核心區域，鄰近龍山寺、天后宮等知名景點</p>
-                </div>
-            </div>
+                
+<div class="map-container">
+    <!-- Google Maps 嵌入 -->
+    <iframe
+        src="https://www.google.com/maps?q=彰化縣鹿港鎮中山路109號&output=embed"
+        width="100%"
+        height="200"
+        style="border:0; border-radius: 10px; display:block;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+    <!-- 下方文字介紹 -->
+    <div class="map-text">
+        <p>🗺️ 交通便利，歡迎蒞臨品嚐</p>
+        <p>位於鹿港老街核心區域，鄰近龍山寺、天后宮等知名景點</p>
+    </div>
+</div>
         </section>
     </main>
 
